@@ -1,4 +1,3 @@
-require('./db');
 var express = require('express');
 var bodyParser = require('body-parser');
 var http = require('http');
@@ -11,16 +10,9 @@ var session = require('express-session');
 var favicon = require('serve-favicon');
 
 var routes = require('./routes');
-var userInfo = require('./routes/userInfo');
-var driverRecord = require('./routes/driverRecord');
-var facebook = require('./routes/facebook');
 
 var passport = require('passport');
 var util = require('util');
-var FacebookStrategy = require('passport-facebook').Strategy;
-
-var FACEBOOK_APP_ID = "273057782873545";
-var FACEBOOK_APP_SECRET = "3d8a24ec3de700c9a0c5f20b21158ca0";
 
 var app = express();
 
@@ -29,7 +21,6 @@ app.set('port', process.env.PORT || 5000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(logger('dev'));
-app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(bodyParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -59,30 +50,3 @@ passport.serializeUser(function(user, done) {
 passport.deserializeUser(function(obj, done) {
     done(null, obj);
 });
-
-passport.use(new FacebookStrategy({
-        clientID: FACEBOOK_APP_ID,
-        clientSecret: FACEBOOK_APP_SECRET,
-        callbackURL: "/auth/facebook/callback"
-    },
-    function(accessToken, refreshToken, profile, done) {
-        // asynchronous verification, for effect...
-        process.nextTick(function () {
-            // To keep the example simple, the user's Facebook profile is returned to
-            // represent the logged-in user.  In a typical application, you would want
-            // to associate the Facebook account with a user record in your database,
-            // and return that user instead.
-            return done(null, profile);
-        });
-    }
-));
-
-app.get('/auth/facebook', facebook.login);
-
-app.get('/auth/facebook/callback',
-    passport.authenticate('facebook', { failureRedirect: '/' }),
-    facebook.succeed);
-
-app.get('/getfbinfo', facebook.show);
-app.get('/logout', facebook.logout);
-
