@@ -14,6 +14,4 @@ mongoose.connection.once('open', function(){
 });
 
 // Require schema
-require('./models/driverRecord');
-require('./models/userInfo');
-require('./models/imgsave');
+require('./models/record');
