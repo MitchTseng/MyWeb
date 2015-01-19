@@ -42,6 +42,10 @@ app.listen(app.get('port'), function(){
 // Main operations
 app.get('/', routes.index);
 
+app.get('/algorithm', routes.algorithm);
+app.get('/autocontrol', routes.autocontrol);
+app.get('/webapplication', routes.webapplication);
+
 // Passport-Facebook
 passport.serializeUser(function(user, done) {
     done(null, user);

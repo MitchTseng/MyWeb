@@ -7,13 +7,15 @@ h1 {
     width: 100%;
 }
 
+#head{
+	 margin-top: 2%;
+}
+
 footer {
     background-color: #4dD593;
     padding: 2%;
     height: 10%;
     width: 100%;
-    position:absolute;
-	bottom:0;
 }
 
 footer div:first-of-type {
