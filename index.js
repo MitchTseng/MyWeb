@@ -47,6 +47,7 @@ app.get('/', routes.index);
 
 app.get('/algorithm', routes.algorithm);
 app.get('/autocontrol', routes.autocontrol);
+app.get('/emsys', routes.emsys);
 app.get('/webapplication', routes.webapplication);
 
 // Passport-Facebook

@@ -16,3 +16,7 @@ exports.autocontrol = function(req, res){
 exports.webapplication = function(req, res){
     res.render('webapplication', {user: req.user, title: "Web Application"});
 };
+
+exports.emsys = function(req, res){
+    res.render('emsys', {user: req.user, title: "Web Application"});
+};
