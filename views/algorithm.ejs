@@ -5,76 +5,77 @@
     	<th style="background-color: #A1E2A2">
     	<h2>Water Fall Algorithm</h2>
 		</th>
-		<tr>
-			<td>
-				<div class="col-sm-5">
-					<img src = "img/a1.jpg" class = "photo img-responsive">
-				</div>
-				<p style="text-align: left; font-size: 27px;" class = "col-sm-7"> 
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Water Fall Algorithm use the concept like Watershed algorithm, see the 1-D or 2-D data as real complicated terrain area. Water Fall Algorithm can find the local minimum efficiently.
-				</p>
-			</td>
-		</tr>
+		<div class = "col-sm-12">
+			<tr>
+				<td>
+					<img src = "img/a1.jpg" class = "photo img-responsive col-sm-5">
+					<p style="text-align: left; font-size: 27px;" class = "col-sm-7"> 
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Water Fall Algorithm use the concept like Watershed algorithm, see the 1-D or 2-D data as real complicated terrain area. Water Fall Algorithm can find the local minimum efficiently.
+					</p>
+				</td>
+			</tr>
+		</div>
+		<div class = "col-sm-12">
 		<tr>
 			<td>
 				<p style="text-align: left; font-size: 27px;" class = "col-sm-7"> 
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First, assign two parameters. One is the volume of water and the other one is step, which means how far the water could move.<br>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Second, let the water fall on every points of the data, and then count every point where the water will move.
 				</p>
-				<div class="col-sm-5">
-					<img src = "img/a2.jpg" class = "photo img-responsive">
-				</div>
+				<img src = "img/a2.jpg" class = "photo img-responsive col-sm-5">
 			</td>
 		</tr>
+		</div>
+		<div class = "col-sm-12">
 		<tr>
 			<td>
-				<div class="col-sm-5">
-					<img src = "img/a3.jpg" class = "photo img-responsive">
-				</div>
+				<img src = "img/a3.jpg" class = "photo img-responsive col-sm-5">
 				<p style="text-align: left; font-size: 27px;" class = "col-sm-7"> 
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When the count times equal to the parameter step, use some method like the Otsu to define a threshold to judge which points are local minimum.
 				</p>
 			</td>
 		</tr>
+		</div>
+		<div class = "col-sm-12">
 		<tr>
 			<td>
 				<p style="text-align: left; font-size: 27px;" class = "col-sm-7"> 
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This algorithm also can be used to find the object's edges. Because the edges is one of the local minimum when the step is not too high. In 1-D and 2-D data, this algorithm is useful to find local minimum and edges.
 				</p>
-				<div class="col-sm-5">
-					<img src = "img/a4.jpg" class = "photo img-responsive">
-				</div>
+				<img src = "img/a4.jpg" class = "photo img-responsive col-sm-5">
 			</td>
 		</tr>
+		</div>
 
 		<th style="background-color: #A1E2A2">
     	<h2>Digital Image Fast Correlation</h2>
 		</th>
+		<div class = "col-sm-12">
 		<tr>
 			<td>
-				<div class="col-sm-5">
-					<img src = "img/a5.jpg" class = "photo img-responsive">
-				</div>
+				<img src = "img/a5.jpg" class = "photo img-responsive col-sm-5">
 				<p style="text-align: left; font-size: 27px;" class = "col-sm-7"> 
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Digital image correlation is a general method to recognize some feature of images. When we use a bigger subset , like 31x31, and the amount of the images is more than several decade, it will cost much time and then can not be used in real-time application.
 				</p>
 			</td>
 		</tr>
+		</div>
+		<div class = "col-sm-12">
 		<tr>
 			<td>
 				<p style="text-align: left; font-size: 27px;" class = "col-sm-7"> 
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I develop a fast version of the digital image correlation. When the amount of images is fifty, the subset size is 31x31 and shift six pixel every time to calculate the result, it cost less than two seconds to calculate the result by using single-thread with a normal CPU. If the quality of the image is high, the cost time can be less than one second.<br>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Normally, when the system use the method in OpenCV with some speed up skills and the code is written in C/C++ to calculate the result, even use multi-thread with a eight-core intel i7 CPU, it will cost more than six seconds to calculate the result in the same situation.
 				</p>
-				<div class="col-sm-5">
-					<img src = "img/a6.jpg" class = "photo img-responsive">
-				</div>
+				<img src = "img/a6.jpg" class = "photo img-responsive col-sm-5">
 			</td>
 		</tr>
+		</div>
+		<div class = "col-sm-12">
 		<tr>
 			<td>
 				<div class="col-sm-5">
-					<img src = "img/a7.jpg" class = "photo img-responsive">
+					<img src = "img/a7.jpg" class = "photo img-responsive col-sm-5">
 				</div>
 				<p style="text-align: left; font-size: 27px;" class = "col-sm-7"> 
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The details of this algorithm is trade secrets, if you want to know the details of this algorithm, please connect to me and discuss it.<br>
@@ -83,6 +84,7 @@
 				</p>
 			</td>
 		</tr>
+		</div>
 	</table>
 
 </div>
