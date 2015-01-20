@@ -2,7 +2,7 @@ var fs = require("fs");
 
 
 exports.index = function(req, res){
-    res.render('index', {user: req.user, title: "Welcome! Here is my Work Collection."});
+    res.render('index', {user: req.user, title: "Mitch's Website"});
 };
 
 exports.algorithm = function(req, res){
