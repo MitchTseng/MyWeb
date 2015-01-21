@@ -49,6 +49,7 @@ app.get('/algorithm', routes.algorithm);
 app.get('/autocontrol', routes.autocontrol);
 app.get('/emsys', routes.emsys);
 app.get('/webapplication', routes.webapplication);
+app.get('/about', routes.about);
 
 // Passport-Facebook
 passport.serializeUser(function(user, done) {

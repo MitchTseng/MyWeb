@@ -18,5 +18,9 @@ exports.webapplication = function(req, res){
 };
 
 exports.emsys = function(req, res){
-    res.render('emsys', {user: req.user, title: "Web Application"});
+    res.render('emsys', {user: req.user, title: "Embedded System"});
+};
+
+exports.about = function(req, res){
+    res.render('about', {user: req.user, title: "About"});
 };
