@@ -56,8 +56,8 @@
 		<tr>
 			<td>
 				<p style="text-align: left; font-size: 21px;" class = "col-sm-6"> 
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I develop a fast version of the digital image correlation. When the amount of images is fifty, the size of each image is 1024 x 768, the subset size is 61x61 and shift 6 pixels every time to calculate the result, it cost 0.32 second on average to calculate the result by using only on thread with a normal CPU.<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Normally, when the system use the method in OpenCV with some speed up skills and the code is written in C/C++, it will cost more than 5 seconds to calculate the result in the same situation, even it is written as a multi-thread program with an eight-core CPU.<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I develop a fast version of the digital image correlation. When the amount of images is fifty, the size of each image is 1024 x 768, the subset size is 61x61 and shift 6 pixels every time to calculate the result, it cost about 0.2 second on average to calculate the result by using only one thread.<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Normally, when the system use the method in OpenCV with some speed up skills and the code is written in C/C++, it will cost about 5 seconds to calculate the result in the same situation, even it uses parallel computing in an eight-core CPU.<br>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; But the original method can let the result has high quality even when the object has curvature surface. The disadvantage of my algorithm is that the result can not have high quality when the object has curvature surface.
 				</p>
 				<img src = "img/a6.jpg" class = "photo img-responsive col-sm-6">
