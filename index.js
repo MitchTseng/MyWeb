@@ -31,7 +31,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Set favicon
-app.use(favicon(__dirname + '/public/img/favicon.ico'));
+app.use(favicon(__dirname + '/public/img/favicon.jpeg'));
 
 // development only
 if ('development' == app.get('env')) {
